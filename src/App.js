@@ -9,12 +9,28 @@ const Stack = createNativeStackNavigator();
 const App = props => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="UserList">
+      <Stack.Navigator
+        initialRouteName="UserList"
+        screenOptions={screenOptions}>
         <Stack.Screen name="UserList" component={UserList} />
-        <Stack.Screen name="UserForm" component={UserForm} />
+        <Stack.Screen
+          name="UserForm"
+          component={UserForm}
+          options={{
+            title: 'Formulário de usuários',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
+};
+
+const screenOptions = {
+  headerStyle: {
+    backgroundColor: '#f4511e',
+  },
+  headerTintColor: '#fff',
+  headerTitleStyle: 'bold',
 };
 
 export default App;
