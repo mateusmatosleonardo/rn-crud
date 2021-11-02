@@ -1,9 +1,23 @@
 import React from 'react';
-import {FlatList, View} from 'react-native';
+import {Alert, FlatList, View} from 'react-native';
 import {Avatar, Button, ListItem, Icon} from 'react-native-elements';
 import users from '../data/users';
 
 const UserList = props => {
+  function confirmUserDeletion(user) {
+    Alert.alert('Excluir usuário', 'Deseja excluir usuário?', [
+      {
+        text: 'sim',
+        onPress() {
+          console.warn('delete' + user.id);
+        },
+      },
+      {
+        text: 'não',
+      },
+    ]);
+  }
+
   function getActions(user) {
     return (
       <>
@@ -16,7 +30,7 @@ const UserList = props => {
         />
         <Button
           onPress={() => {
-            props.navigation.navigate('UserForm', user);
+            confirmUserDeletion(user);
           }}
           type="clear"
           icon={<Icon name="delete" size={25} color="red" />}
