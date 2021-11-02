@@ -7,7 +7,7 @@ const UserList = props => {
   function getUserItem({item: user}) {
     return (
       <ListItem bottomDivider>
-        <Avatar title={user.name} source={{uri: user.avatarURL}} />
+        <Avatar title={user.name} source={{uri: user.avatarURL}} rounded />
         <ListItem.Content>
           <ListItem.Title>{user.name}</ListItem.Title>
           <ListItem.Subtitle>{user.email}</ListItem.Subtitle>
