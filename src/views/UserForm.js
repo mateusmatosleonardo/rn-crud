@@ -16,6 +16,7 @@ const UserForm = ({route, navigation}) => {
           })
         }
         placeholder="Informe o nome"
+        placeholderTextColor="#222"
         value={user.name}
       />
       <Text style={{color: '#222'}}>Email</Text>
@@ -28,6 +29,7 @@ const UserForm = ({route, navigation}) => {
           })
         }
         placeholder="Informe o email"
+        placeholderTextColor="#222"
         value={user.email}
       />
       <Text style={{color: '#222'}}>URL do avatar</Text>
@@ -40,6 +42,7 @@ const UserForm = ({route, navigation}) => {
           })
         }
         placeholder="Informe a URL do avatar"
+        placeholderTextColor="#222"
         value={user.avatarURL}
       />
       <Button
