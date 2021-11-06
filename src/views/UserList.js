@@ -4,13 +4,16 @@ import {Avatar, Button, ListItem, Icon} from 'react-native-elements';
 import UsersContext from '../context/UsersContext';
 
 const UserList = props => {
-  const {state} = useContext(UsersContext);
+  const {state, dispatch} = useContext(UsersContext);
   function confirmUserDeletion(user) {
     Alert.alert('Excluir usuário', 'Deseja excluir usuário?', [
       {
         text: 'sim',
         onPress() {
-          console.warn('delete' + user.id);
+          dispatch({
+            type: 'deleteUser',
+            payload: user,
+          });
         },
       },
       {
