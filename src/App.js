@@ -20,7 +20,7 @@ const App = props => {
             component={UserList}
             options={({navigation}) => {
               return {
-                title: 'Lista de usuários',
+                title: 'Best friends list',
                 headerRight: () => (
                   <Button
                     onPress={() => navigation.navigate('UserForm')}
@@ -35,7 +35,7 @@ const App = props => {
             name="UserForm"
             component={UserForm}
             options={{
-              title: 'Formulário de usuários',
+              title: 'Add best friend',
             }}
           />
         </Stack.Navigator>
