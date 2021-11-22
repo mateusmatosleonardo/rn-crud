@@ -46,7 +46,7 @@ const App = props => {
 
 const screenOptions = {
   headerStyle: {
-    backgroundColor: '#f4511e',
+    backgroundColor: '#f3511e',
   },
   headerTintColor: '#fff',
   headerTitleStyle: 'bold',
